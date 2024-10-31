@@ -1,0 +1,391 @@
+@import url('https://fonts.googleapis.com/css2?family=Gentium+Book+Plus:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Alike+Angular&family=Eagle+Lake&display=swap');
+
+html, body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+}
+.cont1{
+    width: 100%;
+    height: 30vw;
+    background-color: #DEF1F5;
+    margin: 3vw auto;
+    overflow: hidden;
+}
+.cont2{
+    width: 100%;
+    height: max-content;
+    background-color: #F7F7F7;
+    margin: 3vw auto;
+    overflow: hidden;
+    justify-items: center;
+}
+.cont3{
+    width: 100%;
+    height: 40vw;
+    background-color: #DEF1F5;
+    margin: 2vw 0 3vw 0;
+    overflow: hidden;
+}
+.upload-section {
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+}
+
+#img1 {
+    width: 50vw;
+    height: 34vw;
+    margin: 1.3vw;
+    box-sizing: border-box;
+    position: relative;
+    right: 11%;  
+    bottom: 10%;
+    padding: 2vw;
+}
+#img2 {
+    width: 17vw;
+    height: 50%;
+    margin: 1.3vw;
+    box-sizing: border-box;
+    position: relative;  
+    bottom: 28%;
+    right: 38%;
+    animation: circular-motion 1s linear infinite;  
+    /* transform-origin: 50% 50%; */
+}
+
+.cont-head{
+    position: relative;
+    font-family: "Gentium Book Plus", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 4vw;
+    letter-spacing: 0.1em;
+    color: #000000;
+}
+#cont2-head{
+    position: relative;
+    font-family: "Gentium Book Plus", serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 2.5vw;
+    letter-spacing: 0.1em;
+    color: #000000;
+    margin-top: -1vw;
+    width: 60vw;
+    height: 4vw;
+    margin-left: 12vw;
+}
+.cont-head{
+    bottom: 120%;
+    left: 35%;
+}
+
+.main-cont{
+    position: relative;
+    font-family: "Alike Angular", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 2.5vw;
+    letter-spacing: 0.1em;
+    color: #000000;
+}
+#main-cont2{
+    font-size: 1.2vw;
+    font-family: "Eagle Lake", serif;
+    font-weight: 400;
+    font-style: normal;
+    letter-spacing: 0.1em;
+    color: whitesmoke;
+    position: relative;
+    width: 45vw;
+    height: 8vw;
+    margin-top: 1vw;
+    margin-bottom: 0.5vw;
+    background-color: rgb(244, 112, 112);
+    border-radius: 2vw ;
+    border: black 0.1vw solid;
+    padding: 1vw;
+}
+
+.main-cont{
+    width: 60vw;
+    height: 20vw;
+    bottom: 119%;
+    left: 35%;
+}
+
+.main-cont p:hover{
+    background-color: #FFF6F6;
+    color: rgb(0, 0, 0);
+    font-size: 1em;
+    border-radius: 2vw;
+    padding-top: 0.5vw;
+    position: relative;
+    height: 21vw;
+    width: 60vw;
+    border: #000000 0.1vw solid;
+    padding: 1.5vw;
+}
+.drag-image{
+    border: 0.3vw solid #000000;
+    background-color: #ffffff;
+    color: #fff;
+    width: 30vw;
+    border-radius: 2vw;
+    font-weight:400;
+    margin-top: 1vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.drag-image h6{
+    font-family: "Alike Angular", serif;
+    width: 23vw;
+    height: 4vw;
+    font-weight: 400;
+    font-style: normal;
+    text-align: center;
+    font-size: 2vw;
+    font-weight: 300;
+    margin-top: 2vw;
+    color: #000000;
+}
+.drag-image.active{
+    border: 0.2vw solid #000000;
+}
+.drag-image img {
+    max-width: 100%;
+    max-height: 100%;
+    border-radius: 2vw;
+    object-fit: cover;
+}
+
+.drag-image span{
+    font-size: 2vw;
+    font-weight: 300;
+    font-family:"Alike Angular", serif ;
+    color: #000000;
+    margin: 1vw 0 1.5vw 0;
+}
+.drag-image button{
+    padding: 1vw;
+    background-color: #7472D5;
+    color: rgb(255, 255, 255);
+    border-radius: 2vw;
+    width: 13vw;
+    height: 5vw;
+    font-family: "Gentium Book Plus", serif;
+    font-weight: 400;
+    font-style: normal;
+    cursor: pointer;
+    font-size: 1.4vw;
+    text-align: center;
+    cursor: pointer;
+    transition:all 0.5s;
+    margin-bottom: 1.5vw;
+}
+
+.drag-image button:hover{
+    background-color: rgb(98, 166, 222);
+}
+
+#button {
+    width: 25vw;
+    height: 4vw;
+    padding: 0.1vw;
+    border: none;
+    border-radius: 2vw;
+    background-color: #F1B540;
+    color: #000000;
+    cursor: pointer;
+    font-size: 2.5vw;
+    font-family: "Gentium Book Plus", serif;
+    font-weight: 400;
+    font-style: normal;
+    box-shadow: 1vw 1vw 2vw rgba(0, 0, 0);
+    position: relative;
+    left: 33%;
+    margin-bottom: 3vw;
+}
+#Cont2img{
+    position: relative;
+    width: 50vw;
+    height: 35vw;
+    margin-top: -30vw;
+    margin-left: 50vw;
+}
+#cont3-head{
+    height: 5vw;
+    width: 40vw;
+    font-family: "Gentium Book Plus", serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 2.5vw;
+    letter-spacing: 0.1em;
+    color: #000000;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 0.5vw;
+}
+.main-cont3{
+    font-family: "Alike Angular", serif;
+    width: 57vw;
+    height: 21vw;
+    font-weight: 400;
+    font-style: normal;
+    text-align: center;
+    font-size: 1.2vw;
+    font-weight: 300;
+    color: #000000;
+    margin-left: 7vw;
+    margin-top: 1vw;
+}
+ol {
+    list-style-type: none; /* Remove the default numbers */
+    counter-reset: list-counter; /* Initialize the counter */
+}
+
+ol li {
+    counter-increment: list-counter; /* Increment the counter */
+    position: relative; /* Position relative for the pseudo-element */
+ 
+}
+
+ol {
+    list-style-type: none; /* Remove the default numbers */
+    counter-reset: list-counter; /* Initialize the counter */
+}
+
+ol li {
+    counter-increment: list-counter; /* Increment the counter */
+    position: relative; /* Position relative for the pseudo-element */
+    padding-left: 9vw; /* Add space for the custom marker */
+    margin-bottom: 6vw; /* Add some space between list items */
+    text-align: left;
+    font-size: 1.5vw;
+}
+
+ol li::before {
+    content: counter(list-counter);
+    width: 7vw; /* Circle diameter */
+    height: 7vw; /* Circle diameter */
+    border-radius: 50%; /* Make it a circle */
+    background-color: #ffffff ;
+    color: black; /* Text color inside the circle */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    font-size: 3vw;
+    left: 0;
+    top: 25%;
+    transform: translateY(-50%);
+    border: #000000 0.1vw solid;
+    font-weight: bold; /* Make the numbers bold */
+}
+ol li:hover::before {
+    background-color: #7472D5;
+    color: white;
+    cursor: pointer;
+}
+ol li:hover {
+    background-color: #FFF6F6;
+    color: black;
+    cursor: pointer;
+    font-size: 2vw;
+    border-radius: 2vw;
+    text-align: justify;
+    padding: 1vw;
+    padding-left: 9vw;
+    height: 9vw;
+}
+
+ol #li1::after,ol #li2::after{
+    content: '';
+    display: block;
+    margin-top: 3.1vw;
+    border-bottom: #7472D5 0.1vw solid;
+}
+#MobImg{
+    width: 22vw;
+    height: 38vw;
+    margin-top: -26vw;
+    margin-left: 73vw;
+    transition: transform 0.3s ease-in-out;
+}
+@keyframes circular-motion { 
+    0% { 
+        transform: rotate(0deg)  
+        translateY(0.7vw) rotate(0deg); 
+    } 
+    
+    100% { 
+        transform: rotate(360deg)  
+        translateY(0.7vw) rotate(-360deg); 
+    } 
+}
+@keyframes popup {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+.popup-animation {
+    animation: popup 0.6s ease-in-out;
+}
+
+#myBar{
+    color: #fff;
+    background-color: #7472D5;
+    padding: 0.01em 16px;
+}
+.result{
+    color: #fff !important;
+    background-color: #fdf5e6!important;
+}
+#prediction-list {
+    list-style: none;
+    padding: 0;
+    font-size: 1em;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+#selected-image {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    margin-top: 10px;
+}
+
+#predict-button{
+    width: 25vw;
+    height: 4vw;
+    padding: 0.1vw;
+    border: none;
+    border-radius: 2vw;
+    background-color: #F1B540;
+    color: #000000;
+    cursor: pointer;
+    font-size: 2.5vw;
+    font-family: "Gentium Book Plus", serif;
+    font-weight: 400;
+    font-style: normal;
+    box-shadow: 1vw 1vw 2vw rgba(0, 0, 0);
+    position: relative;
+    margin-bottom: 3vw;
+    margin-top: 4vw;
+}
+
+.drag-image:hover #delete-icon {
+    display: block; /* Show the delete icon on hover */
+}

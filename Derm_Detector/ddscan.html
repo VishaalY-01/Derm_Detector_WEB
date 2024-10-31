@@ -1,0 +1,357 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DermDetector- DD Scanpage</title>
+    <link rel="icon" href="nav_files/logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="CSS_files/nav.css">
+    <!-- <link rel="stylesheet" href="CSS_files/slider.css"> -->
+    <link rel="stylesheet" href="CSS_files/ddCont.css">
+    <link rel="stylesheet" href="CSS_files/footer.css">
+    <link rel="stylesheet" href="CSS_files/modal.css">
+    <style>body {
+        overflow-x: hidden;  /* Hides both vertical and horizontal scrollbars */
+    }
+    .whole input{
+        background-color: #eee;
+        margin: 0.8vw 0;
+        padding: 1vw 1.5vw;
+        font-size: 1.8vw;
+        border-radius: 0.8vw;
+        width: 100%;
+        outline: none;
+        position: relative;
+        left: 27%;
+    }
+    #main-cont2{
+        display: block;
+        height: auto;
+        right: 2%;
+        letter-spacing: 0;
+        padding: 2vw;
+        justify-self: center;
+    }
+    .drag-image{
+        height: 50%;
+        width: 30vw;
+        right: 8%;
+        margin-top: 4.5vw;
+        background-color: white;
+    }
+    .part{
+        display: flex;
+        justify-content: space-between;
+    }
+    #button{
+        justify-self: center;
+        display: block;
+        left: 0;
+    }
+    .w3-blue,.w3-hover-blue:hover {
+        color:#fff!important;
+        background-color:#2196F3!important;
+    }
+    .w3-sand,.w3-hover-sand:hover {
+        color: #000!important;
+        background-color: #fdf5e6!important;
+    }
+    .w3-border {
+        border: 1px solid #ccc!important;
+    }
+    #result{
+        text-align: center !important;
+        border: 15px solid #ffd688 !important;
+        border-radius: 4px !important;
+        color: #000!important;
+        background-color: #ffd688 !important;
+    }
+    #selected-image , #btnn,.centre{
+        display: block;
+        justify-self: center;
+        margin-bottom: 30px;
+    }
+    #btnn{
+        background-color: orangered;
+        height: max-content;
+        width: 30%;
+        margin-left: 30%;
+        margin-right: 30%;
+        border-radius: 20px;
+    }
+    #btnn1{
+        justify-self: center;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: x-large;
+        font-weight: bold;
+        background-color: transparent;
+        border: none;
+        display: block;
+        padding: 10px;
+    }
+    #btnn1:hover{
+        color:#fff!important;
+        background-color:orangered !important;
+    }
+    .w3-left-align {
+        text-align: left;
+    }
+    
+    .text-color {
+        color: #333;
+    }
+    
+    #prediction-list {
+        padding-left: 20px;
+        list-style-type: none;
+    }
+    
+    #prediction-list li {
+        background: #fff;
+        margin: 5px 10px 5px 0px;
+        padding: 10px;
+        border-radius: 5px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        transition: background 0.3s;
+    }
+    ul li::before{
+        list-style-type: none;
+    }
+    #prediction-list li:hover {
+        background: #e0e0e0;
+    }
+    .drag-image:hover #delete-icon {
+        display: block; /* Show the delete icon on hover */
+    }
+    </style>
+    <style>
+        #remove-image {
+            display: none;
+            position: absolute;
+            top: -10px;
+            right: -10px;
+            border-radius: 10em;
+            padding: 2px 6px 3px;
+            text-decoration: none;
+            font: 700 21px/20px sans-serif;
+            background: #555;
+            border: 3px solid #fff;
+            color: #FFF;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.5), inset 0 2px 4px rgba(0,0,0,0.3);
+              text-shadow: 0 1px 2px rgba(0,0,0,0.5);
+              -webkit-transition: background 0.5s;
+              transition: background 0.5s;
+            }
+            #remove-image:hover {
+             background: #E54E4E;
+              padding: 3px 7px 5px;
+              top: -11px;
+            right: -11px;
+            }
+            #remove-image:active {
+             background: #E54E4E;
+              top: -10px;
+            right: -11px;
+            }
+    </style>
+</head>
+
+<body>
+   <nav style="position: sticky;">
+       <div class="logo-container">
+        <div class="logo"><a href="index.html"><img src="nav_files/navlogo.png" alt="logo"></a></div>
+       </div>
+       <div class="hamburger" onclick="toggleMenu()">
+           <div></div>
+           <div></div>
+           <div></div>
+       </div>
+       <nav1 class="nav-container">
+           <ul class="nav-menu">
+               <li><a href="index.html">Home</a></li>
+               <li><a href="ddscan.html" style="background-color: #DEF1F5;">DD Scan</a></li>
+               <li><a href="skincare.html">Skin Care</a></li>
+               <li><a href="ddmap.html">DD Map</a></li>
+           </ul>
+       </nav1>
+       <nav2 class="nav-container">
+           <ul class="nav-login" >
+               <li><a href="#" style="background-color: #012757; color : white" id="loginBt">Login</a></li>
+           </ul>
+       </nav2>
+   </nav>
+   <div id="loginModal" class="modal">
+       <div class="modal-content">
+           <span id="closeModal" class="close">&times;</span>
+           <iframe id="loginIframe" src="" style="width:100%; height:100%;" frameborder="0"></iframe>
+       </div>
+   </div>
+   <div class="cont1">
+    <img src="ddscan_cont_files/ddCont1.png" alt="cont1" id="img1"><img src="ddscan_cont_files/magG.png" alt="Magnifying glass" id="img2"><div class="cont-head">
+        <h3>Get your DD Scan done</h3>
+    </div>
+    <div class="main-cont">
+    <p>Upload or capture an image of your skin area to analyse for potential signs of skin conditions. Derm Detector helps identify your skin condition, guiding you on whether further medical attention may be needed.</p>
+    </div>
+    </div>
+    
+    <div class="cont2 centre">
+        <div class="upload-section">
+            <h3 id="cont2-head">Upload a Photo for Cancer Detection</h3>
+            <p id="main-cont2"><strong style="color: black;">IMPORTANT : </strong>Please upload a clear photo of the skin area you wish to analyze. Ensure the image is well-lit and focused.</p>
+        </div>
+        <div class="part">
+            <div class="drag-image" ondrop="dropHandler(event)" ondragover="dragOverHandler(event)" style="position: relative;">
+                <h6>Drag & Drop an Image</h6>
+                <span>OR</span>
+                <button onclick="setTimeout(simulateClick.bind(null, 'image-selector'), 200)">Upload Image</button>
+                <input type="file" id="image-selector" accept="image/*" onchange="previewImage(event)" hidden>
+            </div>
+            <div class="whole">
+                <input style="display: none;" type="text" name="name" placeholder="Name" required />
+                <div id="preview-container" style="position: relative; display:block;">
+                    <img id="selected-image" alt="Selected Image" style="display: none; width: 100%;position: relative;left: 25%; max-width: 300px; margin-top: 20px;">
+                    <!-- Remove button that appears after image upload -->
+                    <a id="remove-image" href="" style="display:none;">&#215;</a>
+                </div>
+                <div class="centre">
+                        <div  class="progress-bar w3-text-teal space-letters">
+                        <i class="fa fa-spinner fa-spin" style="font-size:24px"></i>
+                        <p>Model is loading...</p></div>
+                    </div>
+                    <!-- Progress Bar
+                    Just here for graphics.
+                    The functionality was not implemented because it slows down the model download 
+                    and causes it to fail.-->
+                    <div class="myBar" style="width: 40vw;position: relative;left: 28%;margin-top: 2vw;">
+                        <div  id="myBar" style="height:5px;width:100%"></div>
+                        </div>
+                    <!-- Results Box -->
+                    <div class="w3-center w3-border add-margin side-margin w3-round w3-sand
+                    text-color space-letters bottom-margin dont-break-out" style="width: 40vw;left: 28%;position: relative;margin-top: 2vw; height: max-content;">
+                        <p style="padding: 20px 20px 0px 20px; font-size:larger; font-weight:bold;">Results</p>
+                        <br>
+                        <ul class='w3-left-align text-color' id='prediction-list'></ul>
+            </div>
+        </div>
+    </div>
+    <button onclick="startScan()" id="predict-button">Submit</button>
+    </div>
+ 
+<!--            <div class="hide">
+                <button id='predict-button'>Predict</button>
+            </div>
+            
+            <div class="hide">
+                <input id="image-selector" type="file" multiple>
+            </div> -->
+    </div>
+    <!-- <button onclick="setTimeout(simulateClick.bind(null, 'image-selector'), 200)" id="button">Submit</button> -->
+    <div class="cont3">
+        <h3 id="cont3-head">How to Use Derm Detector ?</h3>
+        <div class="main-cont3">
+            <ol type="1">
+                <li id="li1">Take a clear, focused photo centered on the skin mark, avoiding wrinkles or other objects, or upload an existing image.</li>
+                <li id="li2">Upload your photo to Derm Detector for thorough analysis.</li>
+                <li id="li3">Once the image is uploaded, the results will be available within one minute.</li>
+            </ol>
+        </div>
+        <img src="ddscan_cont_files/Mob1.png" alt="Mob1" id="MobImg">
+    </div>
+        <div class="footer">
+            <div class="footerhead">
+                <div class="Info">
+                    <div class="logoImg"><img src="footer_files/FooterL.png" alt="Logo"></div>
+                    <div class="mainInfo">"Derm Detector” is a robust skin disease detection project that integrates advance machine learning models like CNN.</div>
+                </div>
+                <div class="UseLinks">
+                    <h3 style="font-size: 2vw;"><u>Useful links</u></h3>
+                    <br>
+                    <ul>
+                        <li><a href="index.html"><u>Home</u></a></li>
+                        <li><a href="ddscan.html"><u>DD Scan</u></a></li>
+                        <li><a href="skincare.html"><u>Skin Care</u></a></li>
+                        <li><a href="ddmap.html"><u>DD Map</u></a></li>
+                    <br>
+                    <li><a href="Team.html"><u>Meet our team</u></a></li>
+                    </ul>
+                </div>
+                <div class="ContactUs">
+                    <h3 id="ContactUs" style="font-size: 2vw;"><u>Contact Us</u></h3>
+                    <br>
+                    <ul>
+                        <li><u>Whatsapp Number</u>- 9876541230</li>
+                        <p style="font-size: 1vw;list-style-type: none; position: relative;top: 6%; left: 13%;">(9am to 6pm), (Mon to Sat)</p>
+                        <br>
+                        <li><u>Email</u>- supportDermDetector@gmail.com</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="social">
+                <ul>
+                    <li><a href="https://www.facebook.com/"><img src="footer_files/faceL.png" alt="faceL"></a></li>
+                    <li><a href="https://www.instagram.com/"><img src="footer_files/instaL.png" alt="faceL"></a></li>
+                    <li><a href="https://www.linkedin.com/"><img src="footer_files/linkedinL.png" alt="faceL"></a></li>
+                </ul>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2023 Derm Detector. All rights reserved.</p>
+            </div>
+        </div>
+    <script>
+        function toggleMenu() {
+            document.querySelector('.nav-menu').classList.toggle('active');
+        }
+    </script>
+    <!-- Load jQuery -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js">
+
+	</script>
+	
+	
+	<!-- Load TensorFlow.js
+	<script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@1.6.0/dist/tf.min.js"> 
+	</script>-->
+	<script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@0.13.3/dist/tf.min.js"> 
+	</script>
+	
+	
+	<!-- Load the js files -->
+	<script src="jscript/target_classes.js"></script>
+	<script src="jscript/app_startup_code.js"></script>
+	<script src="jscript/app_batch_prediction_code.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // Check if the user is logged in
+            const loggedIn = localStorage.getItem('loggedIn') === 'true';
+            const loginBt = document.getElementById('loginBt');
+            
+            if (loggedIn && loginBt) {
+                // Get user details from localStorage
+                const userName = localStorage.getItem('userName') || 'User';
+                const userEmail = localStorage.getItem('userEmail');
+                
+                // Replace login button with profile icon and dropdown menu
+                loginBt.outerHTML =`<div class="profile-icon" id="profileIcon">
+                     <img src="Profile.svg" alt="Profile" style="width:4vw; height: 4vw;"></img>
+                    <div class="dropdown-content">
+                        <div class="prof">
+                            <a href="#">${userName}</a>
+                            <a href="#" id="signOutBtn">Sign Out</a>
+                        </div>
+                    </div>
+                </div>`;
+    
+                // Add sign-out functionality
+                document.getElementById('signOutBtn').onclick = function () {
+                    localStorage.clear(); // Clear all session data from localStorage
+                    location.reload(); // Reload the page to update navbar
+                };
+            }
+        });
+    </script>
+    <script src="JS_files/scanner.js"></script>
+    <script src="JS_files/dragNdrop.js"></script>
+    <script src="JS_files/mob_chang.js"></script>
+    <script src="JS_files/loginPop.js"></script>
+</body>
+</html>

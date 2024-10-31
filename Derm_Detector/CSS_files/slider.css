@@ -1,0 +1,265 @@
+@import url('https://fonts.googleapis.com/css2?family=Gentium+Book+Plus:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Eagle+Lake&display=swap');
+
+.slider {
+    width: calc(100% - 40px);
+    max-width: 95%;
+    position: relative;
+    overflow: hidden;
+    margin: 3vw auto;
+    /* border: 4px solid #000000; */
+    border-radius: 20px;
+    box-shadow: 1vw 1vw 2vw rgba(0, 0, 0, 0.2);
+    padding-bottom: 27.67%;
+    height: 80%;
+}
+
+.slides {
+    display: flex;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* animation: fade-in 2s ease-in-out; */
+}
+
+/* Individual Slide */
+.slide {
+    min-width: 100%;
+    box-sizing: border-box;
+    height: 100%;
+    /* animation: slide-in 2s ease-in-out; */
+}
+
+/* .slide:nth-child(odd) {
+    animation: slide-in-left 2s ease-in-out;
+}
+
+.slide:nth-child(even) {
+    animation: slide-in-right 2s ease-in-out;
+} */
+
+/* Slide Image */
+.slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    box-sizing: border-box;
+    /* animation: fade-in-image 2s ease-in-out;  */
+}
+
+.navigation {
+    position: absolute;
+    width: 100%;
+    top: 50%;
+    display: flex;
+    justify-content: space-between;
+    transform: translateY(-50%);
+}
+
+.prev, .next {
+    cursor: pointer;
+    padding: 1vw;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    border-radius: 50%;
+    margin: 0 10px;
+    font-size: 18px;
+}
+
+.prev:hover, .next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.nav-dots {
+    position: absolute;
+    width: 100%;
+    bottom: 10px;
+    display: flex;
+    justify-content: center;
+}
+
+.nav-btn {
+    cursor: pointer;
+    height: 1vw;
+    width: 1vw;
+    margin: 0 5px;
+    background-color: rgba(255, 255, 255, 0.7);
+    border-radius: 50%;
+    display: inline-block;
+}
+
+.nav-btn.active, .nav-btn:hover {
+    background-color: #FF8A00;
+}
+
+.slide-head, .slide-head2, .slide-head3, .slide-head4 {
+    position: absolute;
+    font-family: "Gentium Book Plus", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 3vw;
+    letter-spacing: 0.3em;
+}
+
+.slide-content, .slide-content2, .slide-content3, .slide-content4 {
+    position: absolute;
+    font-family: "Eagle Lake", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 1.6vw;
+}
+
+.slide-head {
+    color: #000000;
+    top: 6%;
+    right: 11%;
+}
+
+.slide-content {
+    width: 45%;
+    height: 30%;
+    color: #000000;
+    top: 44%;
+    right: 10%;
+}
+
+.slide-head2 {
+    color: #ffffff;
+    top: 5%;
+    left: 17%;
+}
+
+.slide-content2 {
+    width: 45%;
+    height: 50%;
+    color: #ffffff;
+    top: 24%;
+    left: 9%;
+    font-size: 1.5vw;
+}
+
+.slide-head3 {
+    color: #000000;
+    top: 5%;
+    right: 21%;
+    font-size: 3.3vw;
+}
+
+.slide-content3 {
+    width: 50%;
+    height: 35%;
+    color: #000000;
+    top: 28%;
+    right: 6%;
+    letter-spacing: 0.2em;
+}
+
+.slide-head4 {
+    color: #ffffff;
+    top: 5%;
+    left: 17%;
+}
+
+.slide-content4 {
+    width: 45%;
+    height: 50%;
+    color: #ffffff;
+    top: 27%;
+    left: 9%;
+    font-size: 1.5vw;
+}
+
+.btn-primary, .btn-primary2, .btn-primary3, .btn-primary4 {
+    background-color: #e34e4c;
+    color: #000000;
+    position: absolute;
+    padding: 0.7vw 3vw;
+    border: 0.2vw solid black;
+    border-radius: 2.2vw;
+    font-family: "Eagle Lake", serif;
+    font-weight: 400;
+    cursor: pointer;
+    font-size: 1.4vw;
+}
+.btn-primary:hover, .btn-primary2:hover, .btn-primary3:hover, .btn-primary4:hover {
+    background-color: white;
+}
+
+.btn-primary {
+    top: 74%;
+    right: 24%;
+}
+
+.btn-primary2 {
+    top: 74%;
+    left: 18%;
+    border: 0.22vw solid black;
+}
+
+.btn-primary3 {
+    top: 70%;
+    right: 26%;
+}
+
+.btn-primary4 {
+    top: 70%;
+    left: 18%;
+}
+
+@media (max-width: 1024px) {
+    .slider {
+        margin: 40px auto;
+    }
+
+    .prev, .next {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 768px) {
+    .slider {
+        margin: 30px auto;
+    }
+
+    .prev, .next {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    .slider {
+        margin: 20px auto;
+    }
+
+    .prev, .next {
+        font-size: 12px;
+    }
+}
+
+@keyframes fade-in {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+@keyframes slide-in {
+    0% { transform: translateX(-100%); }
+    100% { transform: translateX(0); }
+}
+
+@keyframes slide-in-left {
+    0% { transform: translateX(-100%); }
+    100% { transform: translateX(0); }
+}
+
+@keyframes slide-in-right {
+    0% { transform: translateX(100%); }
+    100% { transform: translateX(0); }
+}
+
+@keyframes fade-in-image {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}

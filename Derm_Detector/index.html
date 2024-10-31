@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DermDetector - Homepage</title>
+    <link rel="icon" href="nav_files/logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="CSS_files/nav.css">
+    <link rel="stylesheet" href="CSS_files/slider.css">
+    <link rel="stylesheet" href="CSS_files/homeCont.css">
+    <link rel="stylesheet" href="CSS_files/footer.css">
+    <link rel="stylesheet" href="CSS_files/modal.css">
+     <style>body {
+        overflow-x: hidden; 
+    }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <div class="logo-container">
+            <div class="logo"><a href="index.html"><img src="nav_files/navlogo.png" alt="logo"></a></div>
+        </div>
+        <div class="hamburger" onclick="toggleMenu()">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        <nav1 class="nav-container">
+            <ul class="nav-menu">
+                <li><a href="index.html" style="background-color: #DEF1F5;">Home</a></li>
+                <li><a href="ddscan.html">DD Scan</a></li>
+                <li><a href="skincare.html">Skin Care</a></li>
+                <li><a href="ddmap.html">DD Map</a></li>
+            </ul>
+        </nav1>
+        <nav2 class="nav-container">
+            <ul class="nav-login" >
+                <li><a href="#" style="background-color: #012757; color : white" id="loginBt">Login</a></li>
+            </ul>
+        </nav2>
+    </nav>
+    <div id="loginModal" class="modal">
+        <div class="modal-content">
+            <span id="closeModal" class="close">&times;</span>
+            <iframe id="loginIframe" src="" style="width:100%; height:100%;" frameborder="0"></iframe>
+        </div>
+    </div>
+    <div class="slider">
+        <div class="slides">
+            <div class="slide"><img src="slider_files/Welcome_slider.jpg" alt="Slide 1">
+                <div class="slide-head">
+                    <h3>Welcome to Derm <br>&nbsp &nbsp Detector..!</h3>
+                </div>
+                <div class="slide-content">
+                    <p>Your reliable companion for detecting and
+                        caring for skin diseases with just a snapshot
+                        of your skin condition.</p>
+                </div>
+                <!-- <button id="getStart" class="btn-primary">Get Started</button> -->
+            </div>
+            <div class="slide"><img src="slider_files/DDscan_slider.jpg" alt="Slide 2">
+                <div class="slide-head2">
+                    <h3>DD Scan</h3>
+                </div>
+                <div class="slide-content2">
+                    <p>Empowered by advanced AI and deep learning,Derm Detector delivers rapid, accurate skin assessments. Trained with a vast database of dermatologist-verified images. Early detection at your fingertips.</p>
+                </div>
+                <a href="ddscan.html"><button class="btn-primary2">View Page</button></a>
+            </div>
+            <div class="slide"><img src="slider_files/skin_slider.png" alt="Slide 3">
+                <div class="slide-head3">
+                    <h3>Skin Care</h3>
+                </div>
+                <div class="slide-content3">
+                    <p>Discover the best tips to maintain healthy and glowing skin. From daily routines to expert advice, we cover everything you need to know.</p>
+                </div>
+                <a href="skincare.html"><button class="btn-primary3">View Page</button></a>
+            </div>
+            <div class="slide"><img src="slider_files/DD_map_slider.png" alt="Slide 4">
+                <div class="slide-head4">
+                    <h3>DD Map</h3>
+                </div>
+                <div class="slide-content4">
+                    <p>Effortlessly locate the nearest dermatologists using DD Maps. Gain quick and convenient access to professional skin care services right in your locality.</p>
+                </div>
+                <a href="ddmap.html"><button class="btn-primary4">View Page</button></a>
+            </div>
+        </div>
+        <div class="navigation">
+            <div class="prev" onclick="plusSlides(-1)">&#10094;</div>
+            <div class="next" onclick="plusSlides(1)">&#10095;</div>
+        </div>
+        <div class="nav-dots">
+            <div class="nav-btn" onclick="currentSlide(1)"></div>
+            <div class="nav-btn" onclick="currentSlide(2)"></div>
+            <div class="nav-btn" onclick="currentSlide(3)"></div>
+            <div class="nav-btn" onclick="currentSlide(4)"></div>
+        </div>
+    </div>
+    <div class="cont1"><img src="home_content_files/cont1.png" alt="cont1">
+        <div class="cont-head">
+            <h3>Our Derm Detector could save <br>&nbsp &nbsp &nbsp &nbsp &nbsp your life ! ! !</h3>
+        </div>
+        <div class="main-cont">
+           <ul>
+            <li>Skin reveals underlying health issues, being the body's largest organ.</li>
+            <li style="width: 60vw;">Derm Detector detects skin diseases early, ensuring timely care.</li>
+            <li style="width: 65vw;">Early identification, from rashes to cancer, improves treatment success.</li>
+            <li style="width: 67vw;">Regular checks with Derm Detector enhance overall health and well-being.</li>
+           </ul>
+        </div>
+        </div>
+        <div class="cont2" style="font-size: 1vw;">
+            <div class="cont2head"><h3>Why is our Derm Detector worth using ?</h3></div>
+            <div class="cont2main">
+                <div class="Smart"><img src="home_content_files/Smart.png" alt="Smart"><div class="main-cont2">AI-driven Derm Detector ensures professional accuracy for skin assessments.</div></div>
+                <div class="Simple"><img src="home_content_files/Simple.png" alt="Simple" style="left: 27%;"><div class="main-cont2">Snap, upload, and get quick results on skin health in seconds.</div></div>
+                <div class="Access"><img src="home_content_files/Access.png" alt="Accesible" style="left: 20% ;"><div class="main-cont2">Derm Detector is a Skin care access anytime, anywhere, on any device.</div></div>
+                <div class="TimeEff"><img src="home_content_files/TimeEff.png" alt="TimeEff" style="left: 5%;"><div class="main-cont2">Save time with instant issue detection and nearby dermatologist access.</div></div>
+            </div>
+        </div>
+        <div class="cont3" style="height: 37vw;">
+            <div class="cont3head"><h3>Read what our users say</h3></div>
+            <div class="cont3main" style="top: 10%;">
+                <div class="Person1">
+                    <img src="home_content_files/Person1.png" alt="Person1" id="Person1Img">
+                    <div class="Person1Cont">"Derm Detector was a game-changer, diagnosing my skin condition in minutes, allowing timely treatment in my rural area."</div>
+                    <div class="Person1Name"><h3>-John Smith</h3></div>
+                </div>
+                <div class="Person2">
+                    <div class="Person2Img"><img src="home_content_files/Person2.png" alt="Person2"></div>
+                    <div class="Person2Cont">"Derm Detector saved me money and stress with its affordable, accurate AI detection and user-friendly interface."</div>
+                    <div class="Person2Name"><h3>-David Brown</h3></div>
+                </div>
+                <div class="Person3">
+                    <div class="Person3Img"><img src="home_content_files/Person3.png" alt="Person3"></div>
+                    <div class="Person3Cont">"Derm Detector identified a skin lesion and educated me on skincare, greatly improving my skin care routine."</div>
+                    <div class="Person3Name"><h3>-Robert Clark</h3></div>
+                </div>
+                <div class="Person4">
+                    <div class="Person4Img"><img src="home_content_files/Person4.png" alt="Person4"></div>
+                    <div class="Person4Cont">"Derm Detector filled the healthcare gap and provided precise skin disease detection with nearby clinics location."</div>
+                    <div class="Person4Name"><h3>-Sarah Taylor</h3></div>
+                </div>
+            </div>
+        </div>
+        <div class="footer">
+            <div class="footerhead">
+                <div class="Info">
+                    <div class="logoImg"><img src="footer_files/FooterL.png" alt="Logo"></div>
+                    <div class="mainInfo">"Derm Detector” is a robust skin disease detection project that integrates advance machine learning models like CNN.</div>
+                </div>
+                <div class="UseLinks">
+                    <h3 style="font-size: 2vw;"><u>Useful links</u></h3>
+                    <br>
+                    <ul>
+                        <li><a href="index.html"><u>Home</u></a></li>
+                        <li><a href="ddscan.html"><u>DD Scan</u></a></li>
+                        <li><a href="skincare.html"><u>Skin Care</u></a></li>
+                        <li><a href="ddmap.html"><u>DD Map</u></a></li>
+                        <br>
+                        <li><a href="Team.html"><u>Meet our team</u></a></li>
+                    </ul>
+                </div>
+                <div class="ContactUs">
+                    <h3 id="ContactUs" style="font-size: 2vw;"><u>Contact Us</u></h3>
+                    <br>
+                    <ul>
+                        <li><u>Whatsapp Number</u>- 9876541230</li>
+                        <p style="font-size: 1vw;list-style-type: none; position: relative;top: 6%; left: 13%;">(9am to 6pm), (Mon to Sat)</p>
+                        <br>
+                        <li><u>Email</u>- supportDermDetector@gmail.com</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="social">
+                <ul>
+                    <li><a href="https://www.facebook.com/"><img src="footer_files/faceL.png" alt="faceL"></a></li>
+                    <li><a href="https://www.instagram.com/"><img src="footer_files/instaL.png" alt="instaL"></a></li>
+                    <li><a href="https://www.linkedin.com/"><img src="footer_files/linkedinL.png" alt="linkedinL"></a></li>
+                </ul>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2023 Derm Detector. All rights reserved.</p>
+            </div>
+        </div>
+    <script src="JS_files/slider.js"></script>
+    <script src="JS_files/loginPop.js"></script>
+    <script src="JS_files/modalClose.js"></script>
+    <script src="JS_files/script.js"></script>
+    <script>
+        function toggleMenu() {
+            document.querySelector('.nav-menu').classList.toggle('active');
+        }
+    </script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // Check if the user is logged in
+            const loggedIn = localStorage.getItem('loggedIn') === 'true';
+            const loginBt = document.getElementById('loginBt');
+            
+            if (loggedIn && loginBt) {
+                // Get user details from localStorage
+                const userName = localStorage.getItem('userName') || 'User';
+                const userEmail = localStorage.getItem('userEmail');
+                
+                // Replace login button with profile icon and dropdown menu
+                loginBt.outerHTML =`<div class="profile-icon" id="profileIcon">
+                     <img src="Profile.svg" alt="Profile" style="width:4vw; height: 4vw;"></img>
+                    <div class="dropdown-content">
+                        <div class="prof">
+                            <a href="#">${userName}</a>
+                            <a href="#" id="signOutBtn">Sign Out</a>
+                        </div>
+                    </div>
+                </div>`;
+    
+                // Add sign-out functionality
+                document.getElementById('signOutBtn').onclick = function () {
+                    localStorage.clear(); // Clear all session data from localStorage
+                    location.reload(); // Reload the page to update navbar
+                };
+            }
+        });
+    </script>
+    
+</body>
+
+</html>

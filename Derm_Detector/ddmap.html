@@ -1,0 +1,336 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DermDetector - DD Map</title>
+    <link rel="icon" href="nav_files/logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="CSS_files/nav.css">
+    <link rel="stylesheet" href="CSS_files/slider.css">
+    <link rel="stylesheet" href="CSS_files/ddmap.css">
+    <link rel="stylesheet" href="CSS_files/footer.css">
+    <link rel="stylesheet" href="CSS_files/modal.css">
+    <style>body {
+       overflow-x: hidden; 
+   }
+   </style>
+<style>
+    /* CSS for the Google Map Section */
+#google-map {
+max-width: 100%;
+margin: 20px auto;
+box-sizing: border-box;
+padding: 0 20px;
+}
+
+#google-map iframe {
+width: 100%;
+height: 500px;
+border: 0;
+border-radius: 5px;
+box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+#google-map iframe {
+    height: 500px;
+}
+}
+
+@media (max-width: 480px) {
+#google-map iframe {
+    height: 250px;
+}
+}
+    #appoitment{
+        padding: 100px;
+
+    }
+
+    /* CSS for the Appointment Section */
+#appointment {
+background-color: #f4f4f9;
+padding: 60px 20px;
+}
+
+#appointment .container {
+max-width: 1200px;
+margin: auto;
+display: flex;
+flex-wrap: wrap;
+gap: 20px;
+justify-content: center;
+}
+
+#appointment .col-md-6 {
+flex: 1 1 100%;
+max-width: 100%;
+box-sizing: border-box;
+margin: 10px;
+}
+
+@media (min-width: 768px) {
+#appointment .col-md-6 {
+    flex: 1 1 45%;
+    max-width: 45%;
+}
+}
+
+#appointment h2 {
+font-size: 2rem;
+color: #013A63;
+text-align: center;
+margin-bottom: 20px;
+}
+
+#appointment label {
+color: #013A63;
+font-size: 1rem;
+margin-top: 10px;
+display: block;
+}
+
+#appointment input[type="text"],
+#appointment input[type="email"],
+#appointment input[type="date"],
+#appointment input[type="tel"],
+#appointment select,
+#appointment textarea {
+width: 100%;
+padding: 10px;
+border: 1px solid #ccc;
+border: none;
+border-radius: 5px;
+margin-top: 5px;
+font-size: 1rem;
+box-sizing: border-box;
+}
+
+#appointment textarea {
+resize: vertical;
+}
+
+#appointment #cf-submit {
+background-color: #0061a8;
+color: #fff;
+font-size: 1rem;
+border: none;
+border-radius: 5px;
+cursor: pointer;
+transition: background-color 0.3s ease;
+margin-top: 15px;
+}
+
+#appointment #cf-submit:hover {
+background-color: #004c85;
+}
+
+#appointment .section-title h2 {
+color: #013A63;
+}
+
+@media (max-width: 480px) {
+#appointment h2 {
+    font-size: 1.5rem;
+}
+
+#appointment label {
+    font-size: 0.9rem;
+}
+
+#appointment input[type="text"],
+#appointment input[type="email"],
+#appointment input[type="date"],
+#appointment input[type="tel"],
+#appointment select,
+#appointment textarea {
+    font-size: 0.9rem;
+}
+
+#appointment #cf-submit {
+    font-size: 0.9rem;
+}
+}
+
+</style>
+</head>
+
+<body>
+   <nav style="position: sticky;">
+       <div class="logo-container">
+        <div class="logo"><a href="index.html"><img src="nav_files/navlogo.png" alt="logo"></a></div>
+       </div>
+       <div class="hamburger" onclick="toggleMenu()">
+           <div></div>
+           <div></div>
+           <div></div>
+       </div>
+       <nav1 class="nav-container">
+           <ul class="nav-menu">
+               <li><a href="index.html">Home</a></li>
+               <li><a href="ddscan.html">DD Scan</a></li>
+               <li><a href="skincare.html">Skin Care</a></li>
+               <li><a href="ddmap.html" style="background-color: #DEF1F5;">DD Map</a></li>
+           </ul>
+       </nav1>
+       <nav2 class="nav-container">
+           <ul class="nav-login" >
+               <li><a href="#" style="background-color: #012757; color : white" id="loginBt">Login</a></li>
+           </ul>
+       </nav2>
+   </nav>
+   <div id="loginModal" class="modal">
+       <div class="modal-content">
+           <span id="closeModal" class="close">&times;</span>
+           <iframe id="loginIframe" src="" style="width:100%; height:100%;" frameborder="0"></iframe>
+       </div>
+   </div>
+   <section style="font-family: 'Times New Roman', Times, serif;">
+    <section id="google-map">
+        <!-- How to change your own map point
+               1. Go to Google Maps
+               2. Click on your location point
+               3. Click "Share" and choose "Embed map" tab
+               4. Copy only URL and paste it within the src="" field below
+       -->
+       <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3771.346173300814!2d72.90900281098442!3d19.048511552760115!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7c5f39a7d77d1%3A0x9ebbdeaea9ec24ae!2sShah%20%26%20Anchor%20Kutchhi%20Engineering%20College!5e0!3m2!1sen!2sin!4v1729923114047!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </section>
+    <section id="appointment" data-stellar-background-ratio="3" style="background-position: 0px 457.225px;">
+        <div class="container">
+             <div class="row">
+
+                  <div class="col-md-6 col-sm-6">
+                       <img src="assets\appointment-image.jpg" style="display: block; max-width: 100%; height: auto" class="img-responsive" alt="">
+                  </div>
+
+                  <div class="col-md-6 col-sm-6" ">
+                       <!-- CONTACT FORM HERE -->
+                       <form id="appointment-form" role="form" method="post" action="#">
+
+                            <!-- SECTION TITLE -->
+                            <div class="section-title wow fadeInUp animated" data-wow-delay="0.4s" style="visibility: visible; animation-delay: 0.4s; animation-name: fadeInUp;">
+                                 <h2>Make an appointment</h2>
+                            </div>
+
+                            <div class="wow fadeInUp animated" data-wow-delay="0.8s" style="visibility: visible; animation-delay: 0.8s; animation-name: fadeInUp;">
+                                 <div class="col-md-6 col-sm-6">
+                                      <label for="name">Name</label>
+                                      <input type="text" class="form-control" id="name" name="name" placeholder="Full Name">
+                                 </div>
+
+                                 <div class="col-md-6 col-sm-6">
+                                      <label for="email">Email</label>
+                                      <input type="email" class="form-control" id="email" name="email" placeholder="Your Email">
+                                 </div>
+
+                                 <div class="col-md-6 col-sm-6">
+                                      <label for="date">Select Date</label>
+                                      <input type="date" name="date" value="" class="form-control">
+                                 </div>
+
+                                 <div class="col-md-6 col-sm-6">
+                                      <label for="select">Select Doctor</label>
+                                      <select class="form-control">
+                                            <option>Select Doctor</option>
+                                            <option>Dr. Vishaal Yadav</option>
+                                            <option>Dr. Pratham Rane</option>
+                                            <option>Dr. Mitali Sinha</option>
+                                            <option>Dr. Sahil Solse</option>
+                                            <option>Dr. Neha Pawar</option>
+                                            <option>Dr. Srushti Uphade</option>
+                                            <option>Dr. Vinit Thakur</option>
+                                        </select>
+                                 </div>
+                                 <div class="col-md-12 col-sm-12">
+                                      <label for="telephone">Phone Number</label>
+                                      <input type="tel" class="form-control" id="phone" name="phone" placeholder="Phone">
+                                      <label for="Message">Additional Message</label>
+                                      <textarea class="form-control" rows="5" id="message" name="message" placeholder="Message"></textarea>
+                                      <button type="submit" class="form-control" id="cf-submit" name="submit">Submit Button</button>
+                                 </div>
+                            </div>
+                      </form>
+                  </div>
+
+             </div>
+        </div>
+   </section>
+</section>
+    <div class="footer">
+        <div class="footerhead">
+            <div class="Info">
+                <div class="logoImg"><img src="footer_files/FooterL.png" alt="Logo"></div>
+                <div class="mainInfo">"Derm Detector” is a robust skin disease detection project that integrates advance machine learning models like CNN.</div>
+            </div>
+            <div class="UseLinks">
+                <h3 style="font-size: 2vw;"><u>Useful links</u></h3>
+                <br>
+                <ul>
+                    <li><a href="index.html"><u>Home</u></a></li>
+                    <li><a href="ddscan.html"><u>DD Scan</u></a></li>
+                    <li><a href="skincare.html"><u>Skin Care</u></a></li>
+                    <li><a href="ddmap.html"><u>DD Map</u></a></li>
+                    <br>
+                    <li><a href="Team.html"><u>Meet our team</u></a></li>
+                </ul>
+            </div>
+            <div class="ContactUs">
+                <h3 id="ContactUs" style="font-size: 2vw;"><u>Contact Us</u></h3>
+                <br>
+                <ul>
+                    <li><u>Whatsapp Number</u>- 9876541230</li>
+                    <p style="font-size: 1vw;list-style-type: none; position: relative;top: 6%; left: 13%;">(9am to 6pm), (Mon to Sat)</p>
+                    <br>
+                    <li><u>Email</u>- supportDermDetector@gmail.com</li>
+                </ul>
+            </div>
+        </div>
+        <div class="social">
+            <ul>
+                <li><a href="https://www.facebook.com/"><img src="footer_files/faceL.png" alt="faceL"></a></li>
+                <li><a href="https://www.instagram.com/"><img src="footer_files/instaL.png" alt="instaL"></a></li>
+                <li><a href="https://www.linkedin.com/"><img src="footer_files/linkedinL.png" alt="linkedinL"></a></li>
+            </ul>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2023 Derm Detector. All rights reserved.</p>
+        </div>
+    </div>
+    <script>
+        function toggleMenu() {
+            document.querySelector('.nav-menu').classList.toggle('active');
+        }
+    </script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // Check if the user is logged in
+            const loggedIn = localStorage.getItem('loggedIn') === 'true';
+            const loginBt = document.getElementById('loginBt');
+            
+            if (loggedIn && loginBt) {
+                // Get user details from localStorage
+                const userName = localStorage.getItem('userName') || 'User';
+                const userEmail = localStorage.getItem('userEmail');
+                
+                // Replace login button with profile icon and dropdown menu
+                loginBt.outerHTML =`<div class="profile-icon" id="profileIcon">
+                     <img src="Profile.svg" alt="Profile" style="width:4vw; height: 4vw;"></img>
+                    <div class="dropdown-content">
+                        <div class="prof">
+                            <a href="#">${userName}</a>
+                            <a href="#" id="signOutBtn">Sign Out</a>
+                        </div>
+                    </div>
+                </div>`;
+    
+                // Add sign-out functionality
+                document.getElementById('signOutBtn').onclick = function () {
+                    localStorage.clear(); // Clear all session data from localStorage
+                    location.reload(); // Reload the page to update navbar
+                };
+            }
+        });
+    </script>
+    <script src="JS_files/loginPop.js"></script>
+</body>
+</html>

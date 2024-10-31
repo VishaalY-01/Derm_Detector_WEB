@@ -1,0 +1,126 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DermDetector - Meet our team</title>
+    <link rel="icon" href="nav_files/logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="CSS_files/nav.css">
+    <link rel="stylesheet" href="CSS_files/team.css">
+    <link rel="stylesheet" href="CSS_files/homeCont.css">
+    <link rel="stylesheet" href="CSS_files/footer.css">
+    <link rel="stylesheet" href="CSS_files/modal.css">
+    <style>body {
+       overflow-x: hidden; 
+   }
+   </style>
+</head>
+
+<body>
+   <nav>
+       <div class="logo-container">
+        <div class="logo"><a href="index.html"><img src="nav_files/navlogo.png" alt="logo"></a></div>
+       </div>
+       <div class="hamburger" onclick="toggleMenu()">
+           <div></div>
+           <div></div>
+           <div></div>
+       </div>
+       <nav1 class="nav-container">
+           <ul class="nav-menu">
+               <li><a href="index.html">Home</a></li>
+               <li><a href="ddscan.html">DD Scan</a></li>
+               <li><a href="skincare.html">Skin Care</a></li>
+               <li><a href="ddmap.html">DD Map</a></li>
+           </ul>
+       </nav1>
+       <nav2 class="nav-container">
+           <ul class="nav-login" >
+               <li><a href="#" style="background-color: #012757; color : white" id="loginBt">Login</a></li>
+           </ul>
+       </nav2>
+   </nav>
+   <div id="loginModal" class="modal">
+       <div class="modal-content">
+           <span id="closeModal" class="close">&times;</span>
+           <iframe id="loginIframe" src="" style="width:100%; height:100%;" frameborder="0"></iframe>
+       </div>
+   </div>
+    <div class="timepass">
+        <img id="imgC" src="Team_content_files/image.png" alt="Coming Soon">
+    </div>
+    <div class="footer">
+        <div class="footerhead">
+            <div class="Info">
+                <div class="logoImg"><img src="footer_files/FooterL.png" alt="Logo"></div>
+                <div class="mainInfo">"Derm Detector” is a robust skin disease detection project that integrates advance machine learning models like CNN.</div>
+            </div>
+            <div class="UseLinks">
+                <h3 style="font-size: 2vw;"><u>Useful links</u></h3>
+                <br>
+                <ul>
+                    <li><a href="index.html"><u>Home</u></a></li>
+                    <li><a href="ddscan.html"><u>DD Scan</u></a></li>
+                    <li><a href="skincare.html"><u>Skin Care</u></a></li>
+                    <li><a href="ddmap.html"><u>DD Map</u></a></li>
+                    <br>
+                    <li><a href="Team.html"><u>Meet our team</u></a></li>
+                </ul>
+            </div>
+            <div class="ContactUs">
+                <h3 id="ContactUs" style="font-size: 2vw;"><u>Contact Us</u></h3>
+                <br>
+                <ul>
+                    <li><u>Whatsapp Number</u>- 9876541230</li>
+                    <p style="font-size: 1vw;list-style-type: none; position: relative;top: 6%; left: 13%;">(9am to 6pm), (Mon to Sat)</p>
+                    <br>
+                    <li><u>Email</u>- supportDermDetector@gmail.com</li>
+                </ul>
+            </div>
+        </div>
+        <div class="social">
+            <ul>
+                <li><a href="https://www.facebook.com/"><img src="footer_files/faceL.png" alt="faceL"></a></li>
+                <li><a href="https://www.instagram.com/"><img src="footer_files/instaL.png" alt="instaL"></a></li>
+                <li><a href="https://www.linkedin.com/"><img src="footer_files/linkedinL.png" alt="linkedinL"></a></li>
+            </ul>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2023 Derm Detector. All rights reserved.</p>
+        </div>
+    </div>
+    <script>
+        function toggleMenu() {
+            document.querySelector('.nav-menu').classList.toggle('active');
+        }
+    </script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // Check if the user is logged in
+            const loggedIn = localStorage.getItem('loggedIn') === 'true';
+            const loginBt = document.getElementById('loginBt');
+            
+            if (loggedIn && loginBt) {
+                // Get user details from localStorage
+                const userName = localStorage.getItem('userName') || 'User';
+                const userEmail = localStorage.getItem('userEmail');
+                
+                // Replace login button with profile icon and dropdown menu
+                loginBt.outerHTML = `<div class="profile-icon" id="profileIcon">
+                     <img src="Profile.svg" alt="Profile" style="width:4vw; height: 4vw;"></img>
+                    <div class="dropdown-content">
+                        <a href="#">${userName}</a>
+                        <a href="#" id="signOutBtn">Sign Out</a>
+                    </div>
+                </div>`;
+    
+                // Add sign-out functionality
+                document.getElementById('signOutBtn').onclick = function () {
+                    localStorage.clear(); // Clear all session data from localStorage
+                    location.reload(); // Reload the page to update navbar
+                };
+            }
+        });
+    </script>
+    <script src="JS_files/loginPop.js"></script>
+</body>
+</html>

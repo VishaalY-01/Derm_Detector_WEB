@@ -1,0 +1,184 @@
+@import url('https://fonts.googleapis.com/css2?family=Gentium+Book+Plus:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Eagle+Lake&display=swap');
+
+.cont1,.cont3{
+    width: 100%;
+    height: 30vw;
+    background-color: #F5F5F5;
+    margin: 3vw auto;
+}
+.cont1 img{
+    width: auto;
+    height: 90%;
+    margin: 1.3vw;
+    /* display: flex;
+    justify-content: center; */
+    object-fit: contain;
+    box-sizing: border-box;
+    position: relative;
+    left: 74%;  
+    animation: FadeInAnimation 5s ease-in-out infinite;
+}
+
+.cont-head,.cont2head,.cont3head{
+    position: relative;
+    font-family: "Gentium Book Plus", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 2.5vw;
+    letter-spacing: 0.1em;
+    color: #000000;
+}
+.cont-head{
+    bottom: 95%;
+    left: 13%;
+}
+
+.main-cont,.cont2,.cont3main{
+    position: relative;
+    font-family: "Eagle Lake", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 1.3vw;
+    letter-spacing: 0.1em;
+    color: #000000;
+}
+
+.main-cont{
+    width: 70vw;
+    bottom: 93%;
+    left: 5%;
+}
+
+.main-cont ul li{
+    padding: 1.2vw;
+}
+
+.main-cont ul li:hover{
+    background-color: #c8eef5;
+    color: rgb(0, 0, 0);
+    font-size: 1em;
+    border-radius: 2vw;
+    padding-top: 0.5vw;
+    position: relative;
+    left: 3%;
+    height: 3.5vw;
+    width: 63vw;
+}
+.main-cont ul li::marker{
+    font-size: 1.5vw;
+}
+.cont2{
+    width: 100%;
+    height: 32vw;
+    background-color: #F9D5AB; 
+    margin: 3vw auto;
+}
+.cont2main,.cont3main{
+    display: flex;
+    position: relative;
+    top: 13%;
+    align-items: center;
+    flex-direction: row;
+}
+.Smart,.Simple,.Access,.TimeEff{
+   background-color: #FFF6F6;
+   border: #000000 0.3vw solid;
+   margin: 2vw;
+   width: 35vw;
+   height: 23vw;
+   overflow: hidden;
+   border-radius: 2vw;
+   padding: 2.5vw;
+}
+.Smart img,.Simple img,.Access img,.TimeEff img {
+    width: auto;
+    height: 50%;
+    position: relative;
+    left: 26%;
+}
+.cont2head{
+    position: absolute;
+    top:3%;
+    left: 15%;
+    z-index: 1;
+}
+.cont3head{
+    position: relative;
+    top:4%;
+    left: 28%;
+    z-index: 1;
+}
+.main-cont2{
+    position: relative;
+    top: 2%;
+    left: 2%;
+}
+.main-cont2:hover{
+    background-color: #c8eef5;
+    color: rgb(0, 0, 0);
+    font-size: 1.1vw;
+    border-radius: 2vw;
+    padding: 1vw;
+    width: 18vw;
+    position: relative;
+    left: -7%;
+}
+.Person1,.Person2,.Person3,.Person4{
+    background-color: #DEF1F5;
+    border: #000000 0.3vw solid;
+    margin: 2vw;
+    width: 35vw;
+    height: 23vw;
+    /* overflow: hidden; */
+    border-radius: 2vw;
+    padding: 2.5vw;
+ }
+ #Person1Img,.Person2Img img,.Person3Img img,.Person4Img img{
+    width: 7vw;
+    height: 7vw;
+    position: absolute;
+    border: #000000 0.3vw solid;
+    border-radius: 10vw;
+    margin-top: -7vw;
+    margin-left: 4vw;
+ }
+ .Person1Cont,.Person2Cont,.Person3Cont,.Person4Cont{
+    position: relative;
+    top: 10%; 
+    font-size: 1vw;
+ }
+ .Person1Name,.Person2Name,.Person3Name,.Person4Name{
+    position: relative;
+    top: 23%; 
+ }
+
+ .Person1:hover,.Person2:hover,.Person3:hover,.Person4:hover{
+    /* transform: rotate(10deg); */
+    .Person1Name,.Person2Name,.Person3Name,.Person4Name{
+        display: none;
+    }
+    .Person1Cont,.Person2Cont,.Person3Cont,.Person4Cont{
+        background-color: #FFF6F6;
+        border-radius: 2vw;
+        font-size: 1.1vw;
+        padding: 1vw;
+     }
+ }
+ .out{
+    overflow: hidden;
+ }
+@keyframes FadeInAnimation {
+    0%{
+        opacity: 0.2;
+    }
+    20%{
+        opacity: 0.5;
+    }
+    50%{
+        opacity: 0.8;
+    }
+    100%{
+        opacity: 1;
+    }
+}

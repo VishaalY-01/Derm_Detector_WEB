@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DermDetector - Skin Care</title>
+    <link rel="icon" href="nav_files/logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="CSS_files/nav.css">
+    <link rel="stylesheet" href="CSS_files/footer.css">
+    <link rel="stylesheet" href="CSS_files/skincare.css">
+    <link rel="stylesheet" href="CSS_files/modal.css">
+    <style>body {
+       overflow-x: hidden; 
+   }
+   </style>
+</head>
+
+<body>
+   <nav >
+       <div class="logo-container">
+        <div class="logo"><a href="index.html"><img src="nav_files/navlogo.png" alt="logo"></a></div>
+       </div>
+       <div class="hamburger" onclick="toggleMenu()">
+           <div></div>
+           <div></div>
+           <div></div>
+       </div>
+       <nav1 class="nav-container">
+           <ul class="nav-menu">
+               <li><a href="index.html" >Home</a></li>
+               <li><a href="ddscan.html">DD Scan</a></li>
+               <li><a href="skincare.html" style="background-color: #DEF1F5;">Skin Care</a></li>
+               <li><a href="ddmap.html">DD Map</a></li>
+           </ul>
+       </nav1>
+       <nav2 class="nav-container">
+           <ul class="nav-login" >
+               <li><a href="#" style="background-color: #012757; color : white" id="loginBt">Login</a></li>
+           </ul>
+       </nav2>
+   </nav>
+   <div id="loginModal" class="modal">
+       <div class="modal-content">
+           <span id="closeModal" class="close">&times;</span>
+           <iframe id="loginIframe" src="" style="width:100%; height:100%;" frameborder="0"></iframe>
+       </div>
+   </div>
+    
+    <div class="box1" style="margin: 3vw 0 0 0;">
+        <div class="cont1head">
+            <img src="skincare_cont_files/div1_bg.png" alt="div1_bg" id="bg1">
+            <h3 id="div1head">DD Skin Care a Perfect Skin Care Routine Guide for All Skin Types</h3>
+            <p id="div1cont">A daily skincare routine is essential for keeping your skin healthy and radiant. It consists of steps that cleanse, tone, and moisturize the skin, while also targeting any specific concerns or issues you may have. In this article, we'll explore the elements of an effective skincare routine and offer tips on how to tailor it to suit your skin type and address your unique needs.</p>
+        </div>
+        <!-- <div class="temp"></div> -->
+    </div>
+    <div class="DiLi" id="DiLi1">
+        <li style="list-style-type: none;"><img src="skincare_cont_files/Diamond.png" alt="Diamond" style="height: 3vw;"></li>
+    </div>
+    <div class="box2" >
+        <img src="skincare_cont_files/div2img.png" alt="div2_img" id="img2">
+        <h3 id="div2head">Step 1: Cleanse</h3>
+        <div class="listcont">
+        <ul id="div2cont">
+            <li>Start with Cleansing: Essential for removing dirt, oil, and makeup, preventing clogged pores and breakouts.</li>
+            <li>Choose the Right Cleanser: Foaming or gel for oily/acne-prone skin, cream or oil-based for dry/sensitive skin.</li>
+            <li>Application: Apply to face and neck, gently massage, and rinse with lukewarm water.</li>
+            <li>Final Step: Pat dry with a towel; avoid hot water to prevent dryness.</li>
+        </ul>
+        </div>
+    </div>
+    <div class="DiLi" id="DiLi2">
+        <li style="list-style-type: none;"><img src="skincare_cont_files/Diamond.png" alt="Diamond" style="height: 3vw;"></li>
+    </div>
+    <div class="box3" >
+        <img src="skincare_cont_files/div3img.png" alt="div3_img" id="img3">
+        <h3 id="div3head">Step 2: Tone</h3>
+        <div class="listcont">
+            <ul id="div3cont">
+                <li>Purpose of Toning: Balances pH, removes leftover dirt and oil, tightens pores, and preps skin for moisturizing or treatments.</li>
+                <li>Choose the Right Toner: For oily/acne-prone skin, control oil and clear impurities; for dry/sensitive skin, hydrate and soothe.</li>
+                <li>Application: Apply to a cotton pad or directly to skin, then gently swipe or pat over face and neck after cleansing.</li>
+                <li>Final Step: Check instructions—some toners stay on, while others need rinsing.</li>
+            </ul>
+        </div>
+    </div>
+    <div class="DiLi" id="DiLi3">
+        <li style="list-style-type: none;"><img src="skincare_cont_files/Diamond.png" alt="Diamond" style="height: 3vw;"></li>
+    </div>
+    <div class="box4" >
+        <img src="skincare_cont_files/div4img.png" alt="div4_img" id="img4">
+        <h3 id="div4head">Step 3: Treat</h3>
+        <div class="listcont">
+            <ul id="div4cont">
+                <li>Target Specific Concerns: Apply serums or spot treatments to address issues like dark spots, wrinkles, or uneven texture.</li>
+                <li>Choose Ingredients: Use products with Vitamin C for glow and dark spot reduction, Retinol for fine lines, or Niacinamide for brightening.</li>
+                <li>Application: Apply 2-3 drops to your face and neck after cleansing and toning.</li>
+                <li>Absorption: Gently pat the serum until fully absorbed into the skin.</li>
+            </ul>
+        </div>
+    </div>
+    <div class="DiLi" id="DiLi4">
+        <li style="list-style-type: none;"><img src="skincare_cont_files/Diamond.png" alt="Diamond" style="height: 3vw;"></li>
+    </div>
+    <div class="box5" >
+        <img src="skincare_cont_files/div5img.png" alt="div5_img" id="img5">
+        <h3 id="div5head">Step 4: Moisture</h3>
+        <div class="listcont">
+            <ul id="div5cont">
+                <li>Moisturizing is Key: It keeps skin hydrated, nourished, and protected from environmental stressors like pollution and UV rays.</li>
+                <li>Skin Type Matters: Choose a moisturizer that matches your skin type for optimal results.</li>
+                <li>For Oily Skin: Use a lightweight, oil-free gel or lotion.</li>
+                <li>For Dry Skin: Opt for a thicker, cream-based moisturizer to lock in moisture.</li>
+            </ul>
+        </div>
+    </div>
+    <div class="DiLi" id="DiLi5">
+        <li style="list-style-type: none;"><img src="skincare_cont_files/Diamond.png" alt="Diamond" style="height: 3vw;"></li>
+    </div>
+    <div class="box6" >
+        <img src="skincare_cont_files/div6img.png" alt="div6_img" id="img6">
+        <h3 id="div6head">Step 5: Protect</h3>
+        <div class="listcont">
+            <ul id="div6cont">
+                <li>Use Sunscreen: Apply broad-spectrum sunscreen (SPF 30-50) to protect against UV rays, preventing sunburn, aging, and skin cancer.</li>
+                <li>Daily Use: Apply every day, even on cloudy days, for continuous protection.</li>
+                <li>Choose Wisely: Pick a sunscreen that suits your skin type and needs.</li>
+                <li>Examples: Options include Green Tea Day-Light Gel SPF 35, Chamomile & White Tea SPF 50, Bright Years SPF 45, and Niacinamide & Rice Water SPF 50.</li>
+            </ul>
+        </div>
+    </div>
+    <div class="DiLi" id="DiLi6">
+        <li style="list-style-type: none;"><img src="skincare_cont_files/Diamond.png" alt="Diamond" style="height: 3vw;"></li>
+    </div>
+    <div class="box7" style="margin: 3vw auto;">
+        <div class="cont2head">
+            <h3 id="div7head">Additional Tips</h3>
+            <div class="listcont">
+                <ol id="div7cont">
+                    <li>Hydration: Drink plenty of water daily to keep skin hydrated and elastic.</li>
+                    <li>Balanced Diet: Eat fruits, vegetables, lean proteins, and healthy fats. Avoid excessive sugar and processed foods.</li>
+                    <li>Sleep: Get 7-9 hours of quality sleep each night for skin repair and radiance.</li>
+                    <li>Exfoliation: Exfoliate 1-2 times a week with a gentle product to remove dead skin cells.</li>
+                    <li>Manage Stress: Use stress-reducing activities like yoga or meditation to support skin health.</li>
+                </ol>
+            </div>
+        </div>
+    </div>
+    
+    <div class="footer">
+        <div class="footerhead">
+            <div class="Info">
+                <div class="logoImg"><img src="footer_files/FooterL.png" alt="Logo"></div>
+                <div class="mainInfo">"Derm Detector” is a robust skin disease detection project that integrates advance machine learning models like CNN.</div>
+            </div>
+            <div class="UseLinks">
+                <h3 style="font-size: 2vw;"><u>Useful links</u></h3>
+                <br>
+                <ul>
+                    <li><a href="index.html"><u>Home</u></a></li>
+                    <li><a href="ddscan.html"><u>DD Scan</u></a></li>
+                    <li><a href="skincare.html"><u>Skin Care</u></a></li>
+                    <li><a href="ddmap.html"><u>DD Map</u></a></li>
+                <br>
+                <li><a href="Team.html"><u>Meet our team</u></a></li>
+                </ul>
+            </div>
+            <div class="ContactUs">
+                <h3 id="ContactUs" style="font-size: 2vw;"><u>Contact Us</u></h3>
+                <br>
+                <ul>
+                    <li><u>Whatsapp Number</u>- 9876541230</li>
+                    <p style="font-size: 1vw;list-style-type: none; position: relative;top: 6%; left: 13%;">(9am to 6pm), (Mon to Sat)</p>
+                    <br>
+                    <li><u>Email</u>- supportDermDetector@gmail.com</li>
+                </ul>
+            </div>
+        </div>
+        <div class="social">
+            <ul>
+                <li><a href="https://www.facebook.com/"><img src="footer_files/faceL.png" alt="faceL"></a></li>
+                <li><a href="https://www.instagram.com/"><img src="footer_files/instaL.png" alt="instaL"></a></li>
+                <li><a href="https://www.linkedin.com/"><img src="footer_files/linkedinL.png" alt="linkedinL"></a></li>
+            </ul>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2023 Derm Detector. All rights reserved.</p>
+        </div>
+    </div>
+<!-- <script src="JS_files/showCont.js"></script> -->
+<script>
+    function toggleMenu() {
+        document.querySelector('.nav-menu').classList.toggle('active');
+    }
+</script>
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        // Check if the user is logged in
+        const loggedIn = localStorage.getItem('loggedIn') === 'true';
+        const loginBt = document.getElementById('loginBt');
+        
+        if (loggedIn && loginBt) {
+            // Get user details from localStorage
+            const userName = localStorage.getItem('userName') || 'User';
+            const userEmail = localStorage.getItem('userEmail');
+            
+            // Replace login button with profile icon and dropdown menu
+            loginBt.outerHTML =`<div class="profile-icon" id="profileIcon">
+                     <img src="Profile.svg" alt="Profile" style="width:4vw; height: 4vw;"></img>
+                    <div class="dropdown-content">
+                        <div class="prof">
+                            <a href="#">${userName}</a>
+                            <a href="#" id="signOutBtn">Sign Out</a>
+                        </div>
+                    </div>
+                </div>`;
+
+            // Add sign-out functionality
+            document.getElementById('signOutBtn').onclick = function () {
+                localStorage.clear(); // Clear all session data from localStorage
+                location.reload(); // Reload the page to update navbar
+            };
+        }
+    });
+</script>
+<script src="JS_files/loginPop.js"></script>
+</body>
+</html>
