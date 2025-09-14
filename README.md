@@ -3,6 +3,7 @@
 **Skin Cancer Detection Using Machine Learning with Personalized Skin Care Tips**
 
 [![CSS](https://img.shields.io/badge/CSS-2965f1?style=flat&logo=css3&logoColor=white)](https://github.com/VishaalY-01/Derm_Detector_WEB) [![HTML](https://img.shields.io/badge/HTML-e34f26?style=flat&logo=html5&logoColor=white)](https://github.com/VishaalY-01/Derm_Detector_WEB) [![JavaScript](https://img.shields.io/badge/JavaScript-f7df1e?style=flat&logo=javascript&logoColor=black)](https://github.com/VishaalY-01/Derm_Detector_WEB)
+<img width="2048" height="1005" alt="image" src="https://github.com/user-attachments/assets/211285f0-49e6-44cf-9645-1e468e614037" />
 
 ---
 
